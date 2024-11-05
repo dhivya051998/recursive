@@ -3,10 +3,48 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="recursive.css">
     <title>Recursive</title>
 </head>
 <body>
-    <p class="details"></p>
+    <div class="container">
+        <h2>JSON Merge</h2>
+    <div class="content">
+        <div class="align">
+            <textarea class="jsonOne">
+                {
+                    "id": 1,
+                    "name": "Alice",
+                    "info": {
+                        "age": 30,
+                        "languages": ["English", "Spanish", "French"],
+                        "address": {
+                            "city": "New York",
+                            "zip": "10001"
+                        }
+                    }
+                }
+            </textarea>
+            <textarea class="jsonTwo">
+                 {
+                    "id": 2,
+                    "name": "Alice",
+                    "info": {
+                        "age": 30,
+                        "languages": ["French"],
+                        "address": {
+                            "city": "Los Angeles",
+                            "state": "CA"
+                        }
+                    },
+                    "hobbies": ["reading", "traveling"]
+                }
+            </textarea>
+            <button onclick="getJson()">click</button>
+        </div>
+        <div class="preview"></div>
+    </div>
+</div>
     <script src="recursive.js"></script>
 </body>
 </html>
