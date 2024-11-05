@@ -1,29 +1,3 @@
-// const JsonA = {
-//     "id": 1,
-//     "name": "Alice",
-//     "info": {
-//         "age": 30,
-//         "languages": ["English", "Spanish", "French"],
-//         "address": {
-//             "city": "New York",
-//             "zip": "10001"
-//         }
-//     },
-// };
-
-// const JsonB = {
-//     "id": 2,
-//     "name": "Alice",
-//     "info": {
-//         "age": 30,
-//         "languages": ["French"],
-//         "address": {
-//             "city": "Los Angeles",
-//             "state": "CA"
-//         }
-//     },
-//     "hobbies": ["reading", "traveling"]
-// };
 function mergedJSON(JsonA, JsonB) {
     Object.keys(JsonB).forEach(function (key) {
         if (key in JsonA) {
