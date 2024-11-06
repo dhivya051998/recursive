@@ -22,13 +22,18 @@ function mergedJSON(JsonA, JsonB) {
         }
     });
 };
-function getJson(){
-        let objOne = document.querySelector(".jsonOne").value;
-        let objTwo = document.querySelector(".jsonTwo").value;
+function getJson() {
+    let objOne = document.querySelector(".jsonOne").value;
+    let objTwo = document.querySelector(".jsonTwo").value;
     if (typeof objOne !== 'object' || typeof objTwo !== 'object') {
-        JsonA = JSON.parse(objOne);
-        JsonB = JSON.parse(objTwo);
-        mergedJSON(JsonA, JsonB);
-        document.querySelector(".preview").innerText = JSON.stringify(JsonA);
+        try {
+            JsonA = JSON.parse(objOne);
+            JsonB = JSON.parse(objTwo);
+            mergedJSON(JsonA, JsonB);
+            document.querySelector(".preview").innerText = JSON.stringify(JsonA);
+        } catch (error) {
+            document.querySelector(".preview").innerText = "Invalid JSON format";
+        }
     }
+
 }
