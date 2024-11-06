@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=arrow_forward" />
     <link rel="stylesheet" href="recursive.css">
     <title>Recursive</title>
 </head>
@@ -11,6 +12,7 @@
         <h2>JSON Merge</h2>
     <div class="content">
         <div class="align">
+            <h2>Input</h2>
             <textarea class="jsonOne">
                 {
                     "id": 1,
@@ -40,9 +42,14 @@
                     "hobbies": ["reading", "traveling"]
                 }
             </textarea>
-            <button onclick="getJson()">click</button>
         </div>
-        <pre class="preview"></pre>
+        <button onclick="getJson()"><span class="material-symbols-outlined">
+            arrow_forward
+            </span></button>
+        <div class="preview-container">
+            <h2>Result</h2>
+            <pre class="preview"></pre>
+        </div>
     </div>
 </div>
     <script src="recursive.js"></script>
