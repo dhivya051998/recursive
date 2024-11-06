@@ -30,7 +30,7 @@ function getJson() {
             JsonA = JSON.parse(objOne);
             JsonB = JSON.parse(objTwo);
             mergedJSON(JsonA, JsonB);
-            document.querySelector(".preview").innerText = JSON.stringify(JsonA);
+            document.querySelector(".preview").innerText = JSON.stringify(JsonA,null,5);
         } catch (error) {
             document.querySelector(".preview").innerText = "Invalid JSON";
         }
