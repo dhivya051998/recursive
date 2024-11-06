@@ -32,7 +32,7 @@ function getJson() {
             mergedJSON(JsonA, JsonB);
             document.querySelector(".preview").innerText = JSON.stringify(JsonA);
         } catch (error) {
-            document.querySelector(".preview").innerText = "Invalid JSON format";
+            document.querySelector(".preview").innerText = "Invalid JSON";
         }
     }
 
